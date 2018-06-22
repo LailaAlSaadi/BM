@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
+    <ImageView
+        android:id="@+id/formBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <ImageView
+
+        android:id="@+id/formLogo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formLogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/trans_white_rectangle"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="اتفضل عالتطبيق"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="عندك حساب قبل ؟"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_user_icon"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:hint="إيميل حضرتك"
+                android:paddingStart="10dp"
+                android:textSize="14sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_pass_icon"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:hint="كلمة مرور حضرتك"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/register_button"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="يلا"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="__________________________"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                />
+            <!--<TextView-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:paddingEnd="10dp"-->
+                <!--android:paddingStart="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="او بتقدر تكمل بحساب الفيس بوك"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+
+                <!--/>-->
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="كمل عن طريق الفيس بوك"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <!--<TextView-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:paddingEnd="10dp"-->
+                <!--android:paddingStart="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="او اعمل حساب عن طريق الايميل"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+
+                <!--/>-->
+
+
+
+            <Button
+                android:onClick="goToSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/gmail_red"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="أو من هون بتقدر تسجل"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="__________________________"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:background="@color/yellow"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="أو إنسى بعدين بعدين"
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
